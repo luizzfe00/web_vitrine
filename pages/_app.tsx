@@ -4,10 +4,10 @@ import { useRouter } from 'next/router'
 import Navbar from '../components/Navbar'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: false },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Dashboard', href: '/dashboard', current: false },
+  { name: 'Produtos', href: '/products', current: false },
+  { name: 'Clientes', href: '/clients', current: false },
+  { name: 'Pedidos', href: '#', current: false },
 ]
 
 function MyApp({ Component, pageProps }: AppProps) {

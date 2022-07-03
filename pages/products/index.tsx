@@ -1,4 +1,5 @@
 import React from 'react'
+import Input from '../../components/Input'
 import ProductList from '../../components/ProdutList'
 
 const products = [
@@ -11,8 +12,13 @@ const products = [
 
 const Products = () => {
   return (
-    <div className='w-full h-full flex justify-center items-center'>
+    <div>
+      <div className='w-full flex flex-col py-16 sm:px-52 justify-center items-center'>
+        <div className='flex w-full justify-end mb-4'>
+          <Input placeholder='Nome' />
+        </div>
         <ProductList products={products} />
+      </div>
     </div>
   )
 }

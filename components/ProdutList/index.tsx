@@ -12,7 +12,7 @@ type ProductListProp = {
 
 const ProductList = ({ products }: ProductListProp) => {
   return (
-    <div className='h-full py-16 px-8 flex flex-col space-y-8'>
+    <div className='w-full h-full flex flex-col space-y-8 sm:grid sm:grid-cols-4 sm:gap-8 sm:space-y-0'>
         {products.map((product) => (
             <ProductItem key={product.name} item={product} />
         ))}
