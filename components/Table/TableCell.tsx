@@ -15,7 +15,7 @@ const TableCell = ({ header, item }: TableCellProps) => {
   }
 
   return (
-    <th className={`px-6 py-4 ${getClassName(!!header)}`}>{item.value}</th>
+    <th className={`px-6 py-4 min-w-[10rem] ${getClassName(!!header)}`}>{item.value}</th>
   )
 }
 

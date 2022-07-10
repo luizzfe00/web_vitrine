@@ -3,11 +3,11 @@ import Input from '../../components/Input'
 import ProductList from '../../components/ProdutList'
 
 const products = [
-  { name: 'Livro', value: '42' },
-  { name: 'Camisa', value: '120' },
-  { name: 'Camisa', value: '120' },
-  { name: 'Camisa', value: '120' },
-  { name: 'Camisa', value: '120' },
+  { name: 'Nike', value: '42' },
+  { name: 'Nike', value: '120' },
+  { name: 'Nike', value: '120' },
+  { name: 'Nike', value: '120' },
+  { name: 'Nike', value: '120' },
 ]
 
 const Products = () => {

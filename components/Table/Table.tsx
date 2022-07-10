@@ -15,7 +15,8 @@ export type TableBodyData = {
 }
 
 export type TableBody = { 
-  row: string, 
+  row: string,
+  onClick?: () => void, 
   data: TableBodyData[]
 }
 
@@ -26,7 +27,7 @@ type TableProps = {
 
 const Table = ({ header, data }: TableProps) => {
   return (
-    <table className='table-auto border-collapse text-left shadow-lg'>
+    <table className='table-auto border-collapse text-left shadow-lg w-full'>
       <TableHead items={header} />
       <TableBody items={data} />
     </table>

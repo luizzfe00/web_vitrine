@@ -1,16 +1,24 @@
 import React from 'react'
 import Table, { TableBody, TableHeader } from '../../components/Table/Table'
 
-const headerItems: TableHeader[] = [{ name: 'document', value: 'CPF/CNPJ' }, { name: 'name', value: 'Nome' }]
+const headerItems: TableHeader[] = [
+  { name: 'document', value: 'CPF/CNPJ' }, 
+  { name: 'name', value: 'Nome' },
+  { name: 'last-order-date', value: 'Data do Último Pedido' }
+]
 const dataItems: TableBody[] = [
   {
     row: 'luiz',
+    onClick: () => console.log('opa'),
     data: [
       {
         value: '000.000.000-00'
       },
       {
         value: 'Luiz Felipe'
+      },
+      {
+        value: new Date().toLocaleDateString()
       }
     ]
   }
