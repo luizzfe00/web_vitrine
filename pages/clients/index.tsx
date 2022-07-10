@@ -2,7 +2,19 @@ import React from 'react'
 import Table, { TableBody, TableHeader } from '../../components/Table/Table'
 
 const headerItems: TableHeader[] = [{ name: 'document', value: 'CPF/CNPJ' }, { name: 'name', value: 'Nome' }]
-const dataItems: TableBody[] = [{ name: 'document', value: '000.000.000-00' }, { name: 'name', value: 'Luiz Felipe' }]
+const dataItems: TableBody[] = [
+  {
+    row: 'luiz',
+    data: [
+      {
+        value: '000.000.000-00'
+      },
+      {
+        value: 'Luiz Felipe'
+      }
+    ]
+  }
+]
 
 const Clients = () => {
   return (

@@ -1,14 +1,21 @@
 import React from 'react'
-import { TableBody, TableHeader } from './Table';
+import { TableBody, TableBodyData, TableHeader } from './Table';
 
 type TableCellProps = {
     header?: boolean;
-    item: TableHeader | TableBody;
+    item: TableHeader | TableBodyData;
 }
 
 const TableCell = ({ header, item }: TableCellProps) => {
+  const getClassName = (header: boolean) => {
+    if (header) 
+      return 'text-md font-semibold'
+
+    return 'text-sm font-normal'
+  }
+
   return (
-    <th className='px-6 py-4'>{item.value}</th>
+    <th className={`px-6 py-4 ${getClassName(!!header)}`}>{item.value}</th>
   )
 }
 

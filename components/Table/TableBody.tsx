@@ -3,16 +3,16 @@ import { TableBody } from './Table'
 import TableCell from './TableCell';
 
 type TableBodyProps = {
-    data: TableBody[];
+    items: TableBody[];
 }
 
-const TableBody = ({ data }: TableBodyProps) => {
+const TableBody = ({ items }: TableBodyProps) => {
   return (
     <tbody>
-        {data.map((row) => (
-            <tr key={row.name} className='border-b border-gray-200'>
-                {Object.entries(row).map(([key, value]) => (
-                    <div key={key}>{key}{value}</div>
+        {items.map((row) => (
+            <tr key={row.row} className='border-b border-gray-200'>
+                {row.data.map((item) => (
+                    <TableCell key={item.value.toString()} item={item} />
                 ))}
             </tr>
         ))}

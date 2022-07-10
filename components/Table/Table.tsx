@@ -6,7 +6,18 @@ type CellAlignment = 'left' | 'center' | 'right';
 
 export type TableHeader = { name: string, value: string, alignment?: CellAlignment };
 
-export type TableBody = { name: string, value: (JSX.Element | string), alignment?: CellAlignment, iconField?: boolean, inline?: boolean, secondaryValue?: string };
+export type TableBodyData = {
+  value: (JSX.Element | string), 
+  alignment?: CellAlignment, 
+  iconField?: boolean, 
+  inline?: boolean, 
+  secondaryValue?: string 
+}
+
+export type TableBody = { 
+  row: string, 
+  data: TableBodyData[]
+}
 
 type TableProps = {
   header: TableHeader[];
@@ -17,7 +28,7 @@ const Table = ({ header, data }: TableProps) => {
   return (
     <table className='table-auto border-collapse text-left shadow-lg'>
       <TableHead items={header} />
-      <TableBody data={data} />
+      <TableBody items={data} />
     </table>
   )
 }

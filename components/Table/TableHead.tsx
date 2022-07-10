@@ -11,7 +11,7 @@ const TableHead = ({ items }: TableHeadProps) => {
     <thead>
         <tr className='bg-gray-300 shadow-inline-bottom-thead'>
             {items.map((item) => (
-                <TableCell key={item.name} item={item} />
+                <TableCell key={item.name} item={item} header />
             ))}
         </tr>
     </thead>
